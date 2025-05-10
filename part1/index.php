@@ -14,7 +14,7 @@
   </head>
   <body>
     <h1>This is a test.</h1>
-    <p><?php if($authenticated)) { ?>Connecté !<?php } else { ?>Déconnecté...<?php } ?></p>
+    <p><?php if($authenticated) { ?>Connecté !<?php } else { ?>Déconnecté...<?php } ?></p>
     <form method="get">
       <fieldset>
         <legend>GET</legend>
