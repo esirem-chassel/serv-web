@@ -33,6 +33,7 @@ class DB {
                 'pwd' => md5($pwd),
                 'coins' => 1000,
             ];
+            $this->flush();
         }
     }
 
