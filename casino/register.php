@@ -13,7 +13,7 @@ if (
     && !empty($_REQUEST['pwd2'])
     && ($_REQUEST['pwd'] === $_REQUEST['pwd2'])
 ) {
-    if(!DB::getInstance()->userExists()){
+    if(!DB::getInstance()->userExists($_REQUEST[':login'])){
         DB::getInstance()->addUser($_REQUEST['login'], $_REQUEST['pwd']);
         $results = 'Utilisateur '.$_REQUEST['login'].' ajouté avec succès !';
     } else {
