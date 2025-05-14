@@ -1,8 +1,4 @@
 <?php
-    if(!file_exists('.dbpath')) { echo 'MISSING DB.'; exit; }
-    define('DB_CONFIG_PATH', trim(file_get_contents('.dbpath')));
-    if(!file_exists(DB_CONFIG_PATH)) { echo 'WRONG DB'; exit; }
-
     spl_autoload_register(function($clsName) {
         $clsName = preg_replace('`[^a-zA-Z0-9]`', '', trim($clsName));
         $fn = __DIR__.'/'.$clsName.'.php';

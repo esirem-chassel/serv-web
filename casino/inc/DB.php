@@ -13,7 +13,7 @@ class DB {
 
     protected function getFile()
     {
-        return DB_CONFIG_PATH.'.json';
+        return __DIR__.'/../db.json';
     }
 
     protected function load(bool $force = false) {
