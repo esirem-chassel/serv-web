@@ -65,7 +65,11 @@ class DB {
 
     protected function flush() {
         $fh = @fopen($this->getFile(), 'w+');
-        fwrite($fh, json_encode($this->data));
-        fclose($fh);
+        if(false !== $fh) {
+            fwrite($fh, json_encode($this->data));
+            fclose($fh);
+        } else {
+            throw new Exception('Error : cannot write DB file "'.$this->getFile().'"');
+        }
     }
 }
