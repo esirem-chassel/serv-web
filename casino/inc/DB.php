@@ -69,7 +69,8 @@ class DB {
             fwrite($fh, json_encode($this->data));
             fclose($fh);
         } else {
-            throw new Exception('Error : cannot write DB file "'.$this->getFile().'"');
+            $cid = `whoami`;
+            throw new Exception('Error : cannot write DB file "'.$this->getFile().'" (current user : '.$cid.')');
         }
     }
 }
