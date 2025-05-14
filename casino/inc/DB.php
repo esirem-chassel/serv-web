@@ -19,7 +19,7 @@ class DB {
     protected function load(bool $force = false) {
         if($force || !$this->loaded) {
             if(file_exists($this->getFile())) {
-                $this->data = json_decode(file_get_contents($this->getFile()));
+                $this->data = json_decode(file_get_contents($this->getFile()), true);
             }
             $this->loaded = true;
         }

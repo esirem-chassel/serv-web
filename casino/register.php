@@ -42,6 +42,9 @@ if (
             <input type="submit" value="Enregistrer cet utilisateur !" />
         </fieldset>
     </form>
+    <p>
+        <a href="index.php">Retour</a>
+    </p>
 </body>
 
 </html>
